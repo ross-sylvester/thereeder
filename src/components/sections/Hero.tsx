@@ -112,14 +112,15 @@ export function Hero() {
           >
             GROW YOUR
             <br />
-            <span className="relative inline-block min-w-[280px] sm:min-w-[400px] md:min-w-[500px]">
+            <span className="relative inline-block min-w-[280px] sm:min-w-[400px] md:min-w-[500px] mt-1 sm:mt-2">
               <span className="text-[var(--reed-green)] text-glow drop-shadow-[0_0_30px_rgba(74,222,80,0.5)]" aria-live="polite" aria-atomic="true">
                 {displayText}
               </span>
               <span 
-                className={`inline-block w-[5px] h-[0.75em] bg-[var(--reed-green)] ml-2 align-middle transition-opacity duration-100 shadow-[0_0_20px_rgba(74,222,80,0.8)] ${
+                className={`inline-block w-[5px] h-[0.65em] bg-[var(--reed-green)] ml-2 -mb-[0.05em] transition-opacity duration-100 shadow-[0_0_20px_rgba(74,222,80,0.8)] ${
                   showCursor ? "opacity-100" : "opacity-0"
                 }`}
+                style={{ verticalAlign: 'baseline' }}
                 aria-hidden="true"
               />
             </span>

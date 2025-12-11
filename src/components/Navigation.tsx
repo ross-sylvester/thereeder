@@ -35,13 +35,13 @@ export function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <nav className="flex items-center justify-between h-20" aria-label="Main navigation">
-          {/* Logo */}
+          {/* Logo - Bold and thick like Devin's brand */}
           <Link 
             href="/" 
             className="flex items-center gap-2 group"
             aria-label="The Reeder - Home"
           >
-            <span className="text-2xl font-display tracking-wider text-foreground group-hover:text-[var(--reed-green)] transition-colors duration-300">
+            <span className="text-2xl font-display tracking-[0.15em] text-foreground group-hover:text-[var(--reed-green)] transition-colors duration-300 font-bold" style={{ fontWeight: 900 }}>
               THE REEDER
             </span>
           </Link>

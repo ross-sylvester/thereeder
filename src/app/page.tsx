@@ -7,6 +7,7 @@ import { Podcast } from "@/components/sections/Podcast";
 import { Newsletter } from "@/components/sections/Newsletter";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/Footer";
+import { CookieConsent } from "@/components/CookieConsent";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Newsletter />
       <Contact />
       <Footer />
+      <CookieConsent />
     </main>
   );
 }

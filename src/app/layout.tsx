@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const basePath = process.env.NODE_ENV === 'production' ? '/thereeder' : '';
+const siteUrl = process.env.NODE_ENV === 'production' 
+  ? 'https://ross-sylvester.github.io/thereeder' 
+  : 'http://localhost:3000';
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://thereeder.co"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "The Reeder | B2B Content Strategy by Devin Reed",
     template: "%s | The Reeder",
@@ -19,13 +24,14 @@ export const metadata: Metadata = {
     "LinkedIn content",
     "B2B marketing",
     "demand generation",
+    "Reed Between the Lines",
   ],
   authors: [{ name: "Devin Reed", url: "https://linkedin.com/in/devinreed" }],
   creator: "Devin Reed",
   publisher: "The Reeder",
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: `${basePath}/favicon.ico`,
+    apple: `${basePath}/apple-touch-icon.png`,
   },
   other: {
     "X-Frame-Options": "DENY",
@@ -37,13 +43,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "The Reeder",
-    url: "https://thereeder.co",
+    url: siteUrl,
     images: [
       {
-        url: "/og-image.png",
+        url: `${basePath}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "The Reeder - B2B Content Strategy",
+        alt: "The Reeder - B2B Content Strategy by Devin Reed",
       },
     ],
   },
@@ -52,7 +58,7 @@ export const metadata: Metadata = {
     title: "The Reeder | B2B Content Strategy",
     description: "Content strategy for B2B companies. By Devin Reed.",
     creator: "@deaborhood",
-    images: ["/og-image.png"],
+    images: [`${basePath}/og-image.png`],
   },
   robots: {
     index: true,
@@ -66,7 +72,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://thereeder.co",
+    canonical: siteUrl,
   },
   category: "business",
 };
@@ -77,8 +83,9 @@ const structuredData = {
   "@type": "ProfessionalService",
   name: "The Reeder",
   description: "B2B Content Strategy & Consulting by Devin Reed",
-  url: "https://thereeder.co",
-  logo: "https://thereeder.co/logo.png",
+  url: "https://ross-sylvester.github.io/thereeder",
+  logo: "https://ross-sylvester.github.io/thereeder/og-image.png",
+  image: "https://ross-sylvester.github.io/thereeder/og-image.png",
   founder: {
     "@type": "Person",
     name: "Devin Reed",
@@ -88,12 +95,13 @@ const structuredData = {
       "https://twitter.com/deaborhood",
     ],
   },
-  serviceType: ["Content Strategy", "Thought Leadership", "Content Consulting"],
+  serviceType: ["Content Strategy", "Thought Leadership", "Content Consulting", "B2B Marketing"],
   areaServed: "Worldwide",
   sameAs: [
     "https://linkedin.com/in/devinreed",
     "https://twitter.com/deaborhood",
-    "https://youtube.com/@devinreed",
+    "https://open.spotify.com/show/5u2UnlSJjYE7YVQZpLCJza",
+    "https://podcasts.apple.com/us/podcast/reed-between-the-lines/id1736811325",
   ],
 };
 
@@ -119,9 +127,13 @@ export default function RootLayout({
         <meta name="format-detection" content="telephone=no" />
         <meta name="theme-color" content="#4ADE50" />
         
-        {/* Preconnect for fonts */}
+        {/* Preconnect for fonts - improves performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* DNS Prefetch for external resources */}
+        <link rel="dns-prefetch" href="https://open.spotify.com" />
+        <link rel="dns-prefetch" href="https://podcasts.apple.com" />
       </head>
       <body className="min-h-screen antialiased">
         {/* Skip Link for Accessibility */}
