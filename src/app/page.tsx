@@ -3,6 +3,7 @@ import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
 import { Services } from "@/components/sections/Services";
 import { Results } from "@/components/sections/Results";
+import { LeadMagnet } from "@/components/sections/LeadMagnet";
 import { Podcast } from "@/components/sections/Podcast";
 import { Newsletter } from "@/components/sections/Newsletter";
 import { Contact } from "@/components/sections/Contact";
@@ -18,6 +19,7 @@ export default function Home() {
       <About />
       <Services />
       <Results />
+      <LeadMagnet />
       <Podcast />
       <Newsletter />
       <Contact />

@@ -2,7 +2,6 @@
 
 import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 
 const rotatingWords = ["AUDIENCE", "BRAND", "PIPELINE", "REVENUE", "AUTHORITY"];
@@ -103,24 +102,28 @@ export function Hero() {
             </span>
           </div>
 
-          {/* Main Headline - Matching REED BETWEEN THE LINES energy */}
+          {/* Main Headline - Bold and impactful */}
           <h1
-            className={`text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-display leading-[0.9] tracking-tight text-foreground mb-8 transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+            className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display leading-[0.95] tracking-tight text-foreground mb-8 transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
-            style={{ transitionDelay: "100ms" }}
+            style={{ transitionDelay: "100ms", fontWeight: 400 }}
           >
-            GROW YOUR
-            <br />
-            <span className="relative inline-flex items-baseline min-w-[280px] sm:min-w-[400px] md:min-w-[500px] mt-1 sm:mt-2">
-              <span className="text-[var(--reed-green)] text-glow drop-shadow-[0_0_30px_rgba(74,222,80,0.5)]" aria-live="polite" aria-atomic="true">
+            <span className="block">GROW YOUR</span>
+            <span className="relative inline-flex items-baseline min-w-[240px] sm:min-w-[320px] md:min-w-[420px] lg:min-w-[520px]">
+              <span 
+                className="text-[var(--reed-green)] text-glow drop-shadow-[0_0_40px_rgba(74,222,80,0.6)]" 
+                aria-live="polite" 
+                aria-atomic="true"
+                style={{ textShadow: '0 0 60px rgba(74,222,80,0.4)' }}
+              >
                 {displayText}
               </span>
               <span 
-                className={`inline-block w-[4px] sm:w-[5px] bg-[var(--reed-green)] ml-1 sm:ml-2 transition-opacity duration-100 shadow-[0_0_20px_rgba(74,222,80,0.8)] ${
+                className={`inline-block w-[3px] sm:w-[4px] md:w-[5px] bg-[var(--reed-green)] ml-1 transition-opacity duration-100 shadow-[0_0_20px_rgba(74,222,80,0.8)] ${
                   showCursor ? "opacity-100" : "opacity-0"
                 }`}
-                style={{ height: '0.85em' }}
+                style={{ height: '0.8em' }}
                 aria-hidden="true"
               />
             </span>
@@ -138,25 +141,29 @@ export function Hero() {
             <span className="text-foreground font-medium">We help SaaS companies create content that actually converts.</span>
           </p>
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons - Premium styling */}
           <div
             className={`flex flex-col sm:flex-row gap-4 justify-center mb-20 transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
             style={{ transitionDelay: "300ms" }}
           >
-            <Button asChild size="lg">
-              <Link href="#contact">
-                Let's Talk
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link href="#podcast">
-                <Play className="mr-2 h-4 w-4" />
-                Listen to the Podcast
-              </Link>
-            </Button>
+            <a
+              href="https://cal.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[var(--reed-green)] text-black font-bold text-base uppercase tracking-wider rounded-full hover:bg-[var(--reed-green-light)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(74,222,80,0.5)]"
+            >
+              Let&apos;s Talk
+              <ArrowRight className="h-5 w-5" />
+            </a>
+            <Link
+              href="#podcast"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-[var(--reed-green)] text-[var(--reed-green)] font-bold text-base uppercase tracking-wider rounded-full hover:bg-[var(--reed-green)] hover:text-black transition-all duration-300 hover:scale-105"
+            >
+              <Play className="h-4 w-4" />
+              Listen to the Podcast
+            </Link>
           </div>
 
           {/* Social Proof - Punchy stats */}
@@ -187,28 +194,19 @@ export function Hero() {
       </div>
 
       {/* Scroll Indicator */}
-      <div 
-        className={`absolute bottom-8 left-1/2 -translate-x-1/2 transition-all duration-1000 ${
-          isVisible ? "opacity-100" : "opacity-0"
+      <a 
+        href="#about"
+        className={`absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 text-muted-foreground hover:text-[var(--reed-green)] transition-all duration-500 group ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
         }`}
         style={{ transitionDelay: "600ms" }}
-        aria-hidden="true"
+        aria-label="Scroll to About section"
       >
-        <a 
-          href="#about"
-          className="flex flex-col items-center gap-2 text-muted-foreground hover:text-[var(--reed-green)] transition-colors duration-300"
-        >
-          <span className="text-xs uppercase tracking-widest">Scroll</span>
-          <svg 
-            className="w-5 h-5 animate-bounce" 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
-        </a>
-      </div>
+        <span className="text-xs font-semibold uppercase tracking-[0.2em]">Explore</span>
+        <div className="w-6 h-10 border-2 border-current rounded-full flex justify-center p-1 group-hover:border-[var(--reed-green)]">
+          <div className="w-1.5 h-2.5 bg-current rounded-full animate-bounce group-hover:bg-[var(--reed-green)]" />
+        </div>
+      </a>
     </section>
   );
 }

@@ -18,8 +18,10 @@ export function BookCallButton() {
 
   return (
     <a
-      href="#contact"
-      className={`fixed bottom-6 right-6 z-40 flex items-center gap-2 px-5 py-3 bg-[var(--reed-green)] text-black font-bold rounded-full shadow-lg hover:bg-[var(--reed-green-light)] hover:scale-105 transition-all duration-300 ${
+      href="https://cal.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`fixed bottom-6 right-6 z-40 flex items-center gap-2 px-5 py-3 bg-[var(--reed-green)] text-black font-bold rounded-full shadow-lg hover:bg-[var(--reed-green-light)] hover:scale-105 transition-all duration-300 hover:shadow-[0_0_20px_rgba(74,222,80,0.4)] ${
         isVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0 pointer-events-none"
       }`}
       aria-label="Book a call"
