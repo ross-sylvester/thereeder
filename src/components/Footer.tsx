@@ -1,6 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Linkedin, Twitter, Music } from "lucide-react";
+import { Mail, Linkedin, Music } from "lucide-react";
+
+// Custom X (Twitter) icon
+const XIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden="true">
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
 
 export function Footer() {
   return (
@@ -9,14 +16,26 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="md:col-span-2">
-            <Link href="/" className="inline-block group">
-              <Image
-                src="/logo.png"
-                alt="The Reeder"
-                width={56}
-                height={56}
-                className="w-12 h-12 object-contain group-hover:drop-shadow-[0_0_15px_rgba(74,222,80,0.5)] transition-all duration-300"
-              />
+            <Link href="/" className="flex items-center gap-3 group">
+              <div className="relative">
+                <div className="w-11 h-11 bg-black rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 border border-[var(--reed-green)]/30 overflow-hidden">
+                  <Image
+                    src="/logo.png"
+                    alt="R"
+                    width={36}
+                    height={36}
+                    className="w-8 h-8 object-contain"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-white font-bold text-lg tracking-wide uppercase">
+                  THE REEDER
+                </span>
+                <span className="text-[var(--reed-green)] text-xs font-medium tracking-wider uppercase">
+                  Content Strategy
+                </span>
+              </div>
             </Link>
             <p className="text-muted-foreground mt-4 max-w-sm leading-relaxed">
               Content strategy for B2B companies that want to grow their audience, 
@@ -34,13 +53,13 @@ export function Footer() {
                 <Linkedin className="h-4 w-4 text-muted-foreground" />
               </Link>
               <Link
-                href="https://twitter.com/deaborhood"
+                href="https://x.com/deaborhood"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-muted rounded-full flex items-center justify-center hover:bg-[var(--reed-green)]/20 hover:scale-110 transition-all duration-300"
-                aria-label="Twitter"
+                aria-label="X"
               >
-                <Twitter className="h-4 w-4 text-muted-foreground" />
+                <XIcon className="h-4 w-4 text-muted-foreground" />
               </Link>
               <Link
                 href="https://open.spotify.com/show/5u2UnlSJjYE7YVQZpLCJza"
@@ -68,11 +87,11 @@ export function Footer() {
             </h4>
             <ul className="space-y-3">
               {[
-                { href: "#about", label: "About" },
-                { href: "#services", label: "Services" },
-                { href: "#results", label: "Results" },
-                { href: "#podcast", label: "Podcast" },
-                { href: "#contact", label: "Contact" },
+                { href: "/work", label: "Work" },
+                { href: "/impact", label: "Impact" },
+                { href: "/insights", label: "Insights" },
+                { href: "/about", label: "About" },
+                { href: "/start", label: "Get Started" },
               ].map((link) => (
                 <li key={link.label}>
                   <Link
@@ -109,7 +128,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-[var(--reed-green)] transition-colors duration-200"
                 >
-                  Twitter/X
+                  X (Twitter)
                 </Link>
               </li>
               <li>
@@ -162,4 +181,3 @@ export function Footer() {
     </footer>
   );
 }
-

@@ -1,15 +1,9 @@
-/* Custom fonts - Anton for ultra-bold headlines (matches REED BETWEEN THE LINES energy), DM Sans for body */
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
-
 @import "tailwindcss";
-
-@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: 'DM Sans', system-ui, sans-serif;
-  --font-display: 'Anton', system-ui, sans-serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
   --color-reed-green: var(--reed-green);
   --color-reed-green-light: var(--reed-green-light);
   --color-reed-green-dark: var(--reed-green-dark);
@@ -25,9 +19,8 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-/* ===== DARK THEME (Default - Devin's Brand) ===== */
-:root,
-.dark {
+/* ===== DARK THEME (Only) ===== */
+:root {
   --radius: 0.75rem;
   --background: #0a0a0a;
   --foreground: #ffffff;
@@ -44,17 +37,13 @@
   --reed-green-dark: #22C55E;
   --reed-glow: rgba(74, 222, 80, 0.15);
   --reed-glow-strong: rgba(74, 222, 80, 0.3);
-}
-
-/* ===== TIMING FUNCTIONS ===== */
-:root {
+  
+  /* Timing Functions */
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
   --ease-in-out-cubic: cubic-bezier(0.65, 0, 0.35, 1);
-  --duration-fast: 150ms;
-  --duration-normal: 250ms;
-  --duration-slow: 400ms;
-  --duration-slower: 600ms;
+  
+  color-scheme: dark;
 }
 
 @layer base {
@@ -68,12 +57,14 @@
   
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'DM Sans', system-ui, sans-serif;
+    font-family: var(--font-inter), system-ui, sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Bebas Neue', system-ui, sans-serif;
-    letter-spacing: 0.02em;
+    font-family: var(--font-inter), system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
   }
 }
 
@@ -112,39 +103,6 @@
   to { opacity: 1; }
 }
 
-@keyframes scale-in {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes slide-in-left {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slide-in-right {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
 @keyframes pulse-glow {
   0%, 100% {
     box-shadow: 0 0 20px var(--reed-glow);
@@ -172,30 +130,9 @@
   animation: fade-in 0.5s var(--ease-out-expo) forwards;
 }
 
-.animate-scale-in {
-  animation: scale-in 0.5s var(--ease-out-expo) forwards;
-}
-
-.animate-slide-in-left {
-  animation: slide-in-left 0.7s var(--ease-out-expo) forwards;
-}
-
-.animate-slide-in-right {
-  animation: slide-in-right 0.7s var(--ease-out-expo) forwards;
-}
-
 .animate-pulse-glow {
   animation: pulse-glow 3s ease-in-out infinite;
 }
-
-/* Staggered animation delays */
-.animation-delay-100 { animation-delay: 100ms; }
-.animation-delay-200 { animation-delay: 200ms; }
-.animation-delay-300 { animation-delay: 300ms; }
-.animation-delay-400 { animation-delay: 400ms; }
-.animation-delay-500 { animation-delay: 500ms; }
-.animation-delay-600 { animation-delay: 600ms; }
-.animation-delay-700 { animation-delay: 700ms; }
 
 /* ===== GRADIENT TEXT ===== */
 .text-gradient {
@@ -212,10 +149,6 @@
   box-shadow: 0 0 40px var(--reed-glow);
 }
 
-.glow-green-lg {
-  box-shadow: 0 0 80px var(--reed-glow-strong);
-}
-
 .text-glow {
   text-shadow: 0 0 40px var(--reed-glow-strong);
 }
@@ -228,11 +161,6 @@
   background-size: 60px 60px;
 }
 
-.bg-dot-pattern {
-  background-image: radial-gradient(circle at 1px 1px, rgba(74, 222, 80, 0.15) 1px, transparent 0);
-  background-size: 40px 40px;
-}
-
 /* ===== BUTTON STYLES ===== */
 .btn-primary {
   position: relative;
@@ -243,10 +171,8 @@
   color: #000000;
   padding: 1rem 2rem;
   border-radius: 9999px;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 0.875rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
   cursor: pointer;
   transition: all 0.3s var(--ease-out-expo);
   box-shadow: 0 4px 20px var(--reed-glow);
@@ -258,10 +184,6 @@
   background: var(--reed-green-light);
 }
 
-.btn-primary:active {
-  transform: translateY(-1px);
-}
-
 .btn-secondary {
   display: inline-flex;
   align-items: center;
@@ -270,10 +192,8 @@
   color: var(--reed-green);
   padding: 1rem 2rem;
   border-radius: 9999px;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 0.875rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
   cursor: pointer;
   transition: all 0.3s var(--ease-out-expo);
   background: transparent;
@@ -295,31 +215,6 @@
   transform: translateY(-8px);
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
   border-color: var(--reed-green) !important;
-}
-
-/* ===== LINK STYLES ===== */
-.link-hover {
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-.link-hover::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--reed-green);
-  transition: width 0.3s ease;
-}
-
-.link-hover:hover {
-  color: var(--reed-green);
-}
-
-.link-hover:hover::after {
-  width: 100%;
 }
 
 /* ===== FOCUS STATES ===== */

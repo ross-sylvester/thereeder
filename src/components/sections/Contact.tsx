@@ -2,7 +2,14 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Mail, Linkedin, Twitter, Calendar } from "lucide-react";
+import { ArrowRight, Mail, Linkedin, Calendar } from "lucide-react";
+
+// Custom X (Twitter) icon since Lucide doesn't have the new X logo
+const XIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden="true">
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
 import { Button } from "@/components/ui/button";
 
 export function Contact() {
@@ -100,13 +107,13 @@ export function Contact() {
               <Linkedin className="h-5 w-5 text-muted-foreground hover:text-[var(--reed-green)]" />
             </Link>
             <Link
-              href="https://twitter.com/deaborhood"
+              href="https://x.com/deaborhood"
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 bg-card border border-border rounded-full flex items-center justify-center hover:border-[var(--reed-green)] hover:bg-[var(--reed-green)]/10 hover:scale-110 transition-all duration-300"
-              aria-label="Follow on Twitter"
+              aria-label="Follow on X"
             >
-              <Twitter className="h-5 w-5 text-muted-foreground hover:text-[var(--reed-green)]" />
+              <XIcon className="h-5 w-5 text-muted-foreground hover:text-[var(--reed-green)]" />
             </Link>
             <Link
               href="mailto:devin@thereeder.co"

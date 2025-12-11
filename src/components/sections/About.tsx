@@ -101,14 +101,14 @@ export function About() {
 
             <div className="flex flex-wrap gap-4 mt-10">
               <a
-                href="#services"
+                href="/services"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--reed-green)] text-black font-bold rounded-full hover:bg-[var(--reed-green-light)] transition-all duration-300 hover:scale-105"
               >
                 Our Services
                 <ArrowRight className="h-4 w-4" />
               </a>
               <a
-                href="#results"
+                href="/results"
                 className="inline-flex items-center gap-2 px-6 py-3 border border-border text-foreground font-bold rounded-full hover:border-[var(--reed-green)] hover:text-[var(--reed-green)] transition-all duration-300"
               >
                 See Our Work

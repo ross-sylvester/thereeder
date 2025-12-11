@@ -87,22 +87,25 @@ export function Podcast() {
               The Podcast
             </span>
             
-            {/* Podcast Logo - Matching the exact brand style */}
+            {/* Podcast Logo - Matching exact brand style from the image */}
             <div className="mt-6 mb-8">
-              <div className="flex items-start gap-3">
-                {/* REED in bold green */}
-                <span className="text-6xl lg:text-7xl xl:text-8xl font-display text-[var(--reed-green)] leading-none drop-shadow-[0_0_30px_rgba(74,222,80,0.4)]">
+              <div className="flex items-start gap-4">
+                {/* REED in italic green */}
+                <span 
+                  className="text-6xl lg:text-7xl xl:text-8xl font-display text-[var(--reed-green)] leading-none italic tracking-tight"
+                  style={{ fontStyle: 'italic' }}
+                >
                   REED
                 </span>
-                {/* Right side stack */}
-                <div className="flex flex-col justify-center pt-1">
-                  <span className="text-xl lg:text-2xl xl:text-3xl font-display text-white leading-tight">
+                {/* Right side stack - BETWEEN, THE (boxed), LINES */}
+                <div className="flex flex-col justify-center">
+                  <span className="text-xl lg:text-2xl xl:text-3xl font-display text-white leading-tight tracking-wide">
                     BETWEEN
                   </span>
-                  <span className="text-xl lg:text-2xl xl:text-3xl font-display text-white leading-tight border-2 border-[var(--reed-green)] px-2 py-0.5 inline-block my-1">
+                  <span className="text-xl lg:text-2xl xl:text-3xl font-display text-[var(--reed-green)] leading-tight border-2 border-white px-2 py-0.5 inline-block my-1 bg-transparent">
                     THE LINES
                   </span>
-                  <span className="text-xl lg:text-2xl xl:text-3xl font-display text-white leading-tight">
+                  <span className="text-xl lg:text-2xl xl:text-3xl font-display text-white leading-tight tracking-wide">
                     PODCAST
                   </span>
                 </div>
