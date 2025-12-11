@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, Linkedin, Twitter, Music } from "lucide-react";
 
 export function Footer() {
@@ -9,37 +10,13 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <Link href="/" className="inline-block group">
-              {/* R Logo - no background */}
-              <svg 
-                width="48" 
-                height="48" 
-                viewBox="0 0 100 100" 
-                className="group-hover:drop-shadow-[0_0_15px_rgba(74,222,80,0.5)] transition-all duration-300"
-                aria-hidden="true"
-              >
-                <text 
-                  x="45" 
-                  y="78" 
-                  textAnchor="middle" 
-                  fill="#4ADE50" 
-                  fontFamily="system-ui, -apple-system, sans-serif"
-                  fontSize="85"
-                  fontWeight="900"
-                  fontStyle="italic"
-                >
-                  R
-                </text>
-                <text 
-                  x="88" 
-                  y="25" 
-                  fill="#4ADE50" 
-                  fontFamily="system-ui, -apple-system, sans-serif"
-                  fontSize="18"
-                  fontWeight="700"
-                >
-                  ®
-                </text>
-              </svg>
+              <Image
+                src="/logo.png"
+                alt="The Reeder"
+                width={56}
+                height={56}
+                className="w-12 h-12 object-contain group-hover:drop-shadow-[0_0_15px_rgba(74,222,80,0.5)] transition-all duration-300"
+              />
             </Link>
             <p className="text-muted-foreground mt-4 max-w-sm leading-relaxed">
               Content strategy for B2B companies that want to grow their audience, 

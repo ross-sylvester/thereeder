@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
@@ -35,44 +36,20 @@ export function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <nav className="flex items-center justify-between h-20" aria-label="Main navigation">
-          {/* Logo - R icon only (pixel-perfect match to Devin's brand) */}
+          {/* Logo - Exact R icon from Devin's brand */}
           <Link 
             href="/" 
-            className="group"
+            className="group flex-shrink-0"
             aria-label="The Reeder - Home"
           >
-            <svg 
-              width="40" 
-              height="40" 
-              viewBox="0 0 100 100" 
-              className="sm:w-12 sm:h-12 group-hover:drop-shadow-[0_0_15px_rgba(74,222,80,0.5)] transition-all duration-300"
-              aria-hidden="true"
-            >
-              {/* R letter - bold italic style matching Devin's brand - no background */}
-              <text 
-                x="45" 
-                y="78" 
-                textAnchor="middle" 
-                fill="#4ADE50" 
-                fontFamily="system-ui, -apple-system, sans-serif"
-                fontSize="85"
-                fontWeight="900"
-                fontStyle="italic"
-              >
-                R
-              </text>
-              {/* ® symbol */}
-              <text 
-                x="88" 
-                y="25" 
-                fill="#4ADE50" 
-                fontFamily="system-ui, -apple-system, sans-serif"
-                fontSize="18"
-                fontWeight="700"
-              >
-                ®
-              </text>
-            </svg>
+            <Image
+              src="/logo.png"
+              alt="The Reeder"
+              width={48}
+              height={48}
+              className="w-10 h-10 sm:w-12 sm:h-12 object-contain group-hover:drop-shadow-[0_0_15px_rgba(74,222,80,0.5)] transition-all duration-300"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation - Centered */}
