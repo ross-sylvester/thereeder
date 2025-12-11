@@ -8,6 +8,7 @@ import { Newsletter } from "@/components/sections/Newsletter";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/Footer";
 import { CookieConsent } from "@/components/CookieConsent";
+import { BookCallButton } from "@/components/BookCallButton";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <Contact />
       <Footer />
       <CookieConsent />
+      <BookCallButton />
     </main>
   );
 }

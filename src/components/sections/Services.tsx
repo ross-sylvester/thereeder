@@ -55,7 +55,7 @@ export function Services() {
     <section
       ref={sectionRef}
       id="services"
-      className="py-24 lg:py-32 bg-background relative overflow-hidden"
+      className="py-24 lg:py-32 bg-background relative overflow-hidden scroll-mt-20"
     >
       {/* Subtle glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[var(--reed-green)]/5 rounded-full blur-[200px]" aria-hidden="true" />

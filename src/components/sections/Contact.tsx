@@ -30,7 +30,7 @@ export function Contact() {
     <section
       ref={sectionRef}
       id="contact"
-      className="py-24 lg:py-32 bg-background relative overflow-hidden"
+      className="py-24 lg:py-32 bg-background relative overflow-hidden scroll-mt-20"
     >
       {/* Background Effects */}
       <div className="absolute inset-0 bg-grid-pattern opacity-30" aria-hidden="true" />

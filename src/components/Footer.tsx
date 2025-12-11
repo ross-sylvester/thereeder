@@ -9,21 +9,38 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <Link href="/" className="inline-block group">
-              {/* R Logo - matching Devin's exact brand */}
-              <div className="relative w-14 h-14 bg-[#3a3a3a] rounded-lg flex items-center justify-center group-hover:bg-[#454545] transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(74,222,80,0.3)]">
-                <span 
-                  className="text-[40px] font-display text-[var(--reed-green)] leading-none select-none"
-                  style={{ 
-                    fontWeight: 900,
-                    fontStyle: 'italic',
-                    transform: 'skewX(-5deg)',
-                    textShadow: '2px 2px 0 rgba(0,0,0,0.3)'
-                  }}
+              {/* R Logo - pixel-perfect match */}
+              <svg 
+                width="56" 
+                height="56" 
+                viewBox="0 0 100 100" 
+                className="group-hover:drop-shadow-[0_0_15px_rgba(74,222,80,0.4)] transition-all duration-300"
+                aria-hidden="true"
+              >
+                <rect x="0" y="0" width="100" height="100" rx="12" fill="#3a3a3a" className="group-hover:fill-[#454545] transition-colors duration-300" />
+                <text 
+                  x="50" 
+                  y="72" 
+                  textAnchor="middle" 
+                  fill="#4ADE50" 
+                  fontFamily="system-ui, -apple-system, sans-serif"
+                  fontSize="72"
+                  fontWeight="900"
+                  fontStyle="italic"
                 >
                   R
-                </span>
-                <span className="absolute top-1.5 right-1.5 text-[10px] text-[var(--reed-green)] font-bold">®</span>
-              </div>
+                </text>
+                <text 
+                  x="82" 
+                  y="28" 
+                  fill="#4ADE50" 
+                  fontFamily="system-ui, -apple-system, sans-serif"
+                  fontSize="16"
+                  fontWeight="700"
+                >
+                  ®
+                </text>
+              </svg>
             </Link>
             <p className="text-muted-foreground mt-4 max-w-sm leading-relaxed">
               Content strategy for B2B companies that want to grow their audience, 

@@ -112,30 +112,30 @@ export function Hero() {
           >
             GROW YOUR
             <br />
-            <span className="relative inline-block min-w-[280px] sm:min-w-[400px] md:min-w-[500px] mt-1 sm:mt-2">
+            <span className="relative inline-flex items-baseline min-w-[280px] sm:min-w-[400px] md:min-w-[500px] mt-1 sm:mt-2">
               <span className="text-[var(--reed-green)] text-glow drop-shadow-[0_0_30px_rgba(74,222,80,0.5)]" aria-live="polite" aria-atomic="true">
                 {displayText}
               </span>
               <span 
-                className={`inline-block w-[5px] h-[0.65em] bg-[var(--reed-green)] ml-2 -mb-[0.05em] transition-opacity duration-100 shadow-[0_0_20px_rgba(74,222,80,0.8)] ${
+                className={`inline-block w-[4px] sm:w-[5px] bg-[var(--reed-green)] ml-1 sm:ml-2 transition-opacity duration-100 shadow-[0_0_20px_rgba(74,222,80,0.8)] ${
                   showCursor ? "opacity-100" : "opacity-0"
                 }`}
-                style={{ verticalAlign: 'baseline' }}
+                style={{ height: '0.85em' }}
                 aria-hidden="true"
               />
             </span>
           </h1>
 
-          {/* Subheadline - Devin's direct, punchy style */}
+          {/* Subheadline - Company focused */}
           <p
             className={`text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-12 transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
             style={{ transitionDelay: "200ms" }}
           >
-            Most B2B content is forgettable. Yours doesn't have to be.
+            Most B2B content is forgettable. Yours doesn&apos;t have to be.
             <br className="hidden sm:block" />
-            <span className="text-foreground font-medium">I help SaaS companies create content that actually converts.</span>
+            <span className="text-foreground font-medium">We help SaaS companies create content that actually converts.</span>
           </p>
 
           {/* CTA Buttons */}

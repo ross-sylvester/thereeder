@@ -35,35 +35,50 @@ export function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <nav className="flex items-center justify-between h-20" aria-label="Main navigation">
-          {/* Logo - R icon only (matching Devin's exact brand) */}
+          {/* Logo - R icon only (pixel-perfect match to Devin's brand) */}
           <Link 
             href="/" 
             className="group"
             aria-label="The Reeder - Home"
           >
-            {/* R Logo - Exact match to Devin's brand icon */}
-            <div className="relative w-12 h-12 sm:w-14 sm:h-14 bg-[#3a3a3a] rounded-lg flex items-center justify-center group-hover:bg-[#454545] transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(74,222,80,0.3)]">
-              <span 
-                className="text-[32px] sm:text-[38px] font-display text-[var(--reed-green)] leading-none select-none"
-                style={{ 
-                  fontWeight: 900,
-                  fontStyle: 'italic',
-                  transform: 'skewX(-5deg)',
-                  textShadow: '2px 2px 0 rgba(0,0,0,0.3)'
-                }}
+            <svg 
+              width="48" 
+              height="48" 
+              viewBox="0 0 100 100" 
+              className="sm:w-14 sm:h-14 group-hover:drop-shadow-[0_0_15px_rgba(74,222,80,0.4)] transition-all duration-300"
+              aria-hidden="true"
+            >
+              {/* Background */}
+              <rect x="0" y="0" width="100" height="100" rx="12" fill="#3a3a3a" className="group-hover:fill-[#454545] transition-colors duration-300" />
+              {/* R letter - bold italic style matching Devin's brand */}
+              <text 
+                x="50" 
+                y="72" 
+                textAnchor="middle" 
+                fill="#4ADE50" 
+                fontFamily="system-ui, -apple-system, sans-serif"
+                fontSize="72"
+                fontWeight="900"
+                fontStyle="italic"
               >
                 R
-              </span>
-              <span 
-                className="absolute top-1 right-1 sm:top-1.5 sm:right-1.5 text-[8px] sm:text-[10px] text-[var(--reed-green)] font-bold"
+              </text>
+              {/* ® symbol */}
+              <text 
+                x="82" 
+                y="28" 
+                fill="#4ADE50" 
+                fontFamily="system-ui, -apple-system, sans-serif"
+                fontSize="16"
+                fontWeight="700"
               >
                 ®
-              </span>
-            </div>
+              </text>
+            </svg>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
+          {/* Desktop Navigation - Centered */}
+          <div className="hidden lg:flex items-center justify-center gap-8 flex-1">
             {navLinks.map((link) => (
               <Link
                 key={link.href}

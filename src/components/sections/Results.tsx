@@ -69,7 +69,7 @@ export function Results() {
     <section
       ref={sectionRef}
       id="results"
-      className="py-24 lg:py-32 bg-muted/30 relative overflow-hidden"
+      className="py-24 lg:py-32 bg-muted/30 relative overflow-hidden scroll-mt-20"
     >
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -87,7 +87,7 @@ export function Results() {
             <span className="text-[var(--reed-green)]">LOUDER THAN WORDS</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-6">
-            I don't just talk about content strategy. I've executed it at companies you've heard of.
+            We don&apos;t just talk about content strategy. We&apos;ve executed it at companies you&apos;ve heard of.
           </p>
         </div>
 

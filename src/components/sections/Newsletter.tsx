@@ -27,7 +27,7 @@ export function Newsletter() {
   return (
     <section
       ref={sectionRef}
-      className="py-24 lg:py-32 bg-[var(--reed-green)] relative overflow-hidden"
+      className="py-24 lg:py-32 bg-[var(--reed-green)] relative overflow-hidden scroll-mt-20"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-dot-pattern opacity-20" aria-hidden="true" />
@@ -52,7 +52,7 @@ export function Newsletter() {
           </h2>
           
           <p className="text-lg text-black/80 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Every week I share frameworks, tactics, and real examples from my work 
+            Every week we share frameworks, tactics, and real examples from our work 
             scaling content at Gong, Clari, and beyond. 
             <span className="font-semibold text-black"> No fluff. Just what works.</span>
           </p>
