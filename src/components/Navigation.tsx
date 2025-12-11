@@ -42,22 +42,20 @@ export function Navigation() {
             aria-label="The Reeder - Home"
           >
             <svg 
-              width="48" 
-              height="48" 
+              width="40" 
+              height="40" 
               viewBox="0 0 100 100" 
-              className="sm:w-14 sm:h-14 group-hover:drop-shadow-[0_0_15px_rgba(74,222,80,0.4)] transition-all duration-300"
+              className="sm:w-12 sm:h-12 group-hover:drop-shadow-[0_0_15px_rgba(74,222,80,0.5)] transition-all duration-300"
               aria-hidden="true"
             >
-              {/* Background */}
-              <rect x="0" y="0" width="100" height="100" rx="12" fill="#3a3a3a" className="group-hover:fill-[#454545] transition-colors duration-300" />
-              {/* R letter - bold italic style matching Devin's brand */}
+              {/* R letter - bold italic style matching Devin's brand - no background */}
               <text 
-                x="50" 
-                y="72" 
+                x="45" 
+                y="78" 
                 textAnchor="middle" 
                 fill="#4ADE50" 
                 fontFamily="system-ui, -apple-system, sans-serif"
-                fontSize="72"
+                fontSize="85"
                 fontWeight="900"
                 fontStyle="italic"
               >
@@ -65,11 +63,11 @@ export function Navigation() {
               </text>
               {/* ® symbol */}
               <text 
-                x="82" 
-                y="28" 
+                x="88" 
+                y="25" 
                 fill="#4ADE50" 
                 fontFamily="system-ui, -apple-system, sans-serif"
-                fontSize="16"
+                fontSize="18"
                 fontWeight="700"
               >
                 ®

@@ -194,9 +194,20 @@ export function Hero() {
         style={{ transitionDelay: "600ms" }}
         aria-hidden="true"
       >
-        <div className="w-6 h-10 border-2 border-[var(--reed-green)]/50 rounded-full flex justify-center pt-2">
-          <div className="w-1.5 h-3 bg-[var(--reed-green)] rounded-full animate-bounce" />
-        </div>
+        <a 
+          href="#about"
+          className="flex flex-col items-center gap-2 text-muted-foreground hover:text-[var(--reed-green)] transition-colors duration-300"
+        >
+          <span className="text-xs uppercase tracking-widest">Scroll</span>
+          <svg 
+            className="w-5 h-5 animate-bounce" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
+        </a>
       </div>
     </section>
   );

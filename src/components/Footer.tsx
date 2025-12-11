@@ -9,33 +9,32 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <Link href="/" className="inline-block group">
-              {/* R Logo - pixel-perfect match */}
+              {/* R Logo - no background */}
               <svg 
-                width="56" 
-                height="56" 
+                width="48" 
+                height="48" 
                 viewBox="0 0 100 100" 
-                className="group-hover:drop-shadow-[0_0_15px_rgba(74,222,80,0.4)] transition-all duration-300"
+                className="group-hover:drop-shadow-[0_0_15px_rgba(74,222,80,0.5)] transition-all duration-300"
                 aria-hidden="true"
               >
-                <rect x="0" y="0" width="100" height="100" rx="12" fill="#3a3a3a" className="group-hover:fill-[#454545] transition-colors duration-300" />
                 <text 
-                  x="50" 
-                  y="72" 
+                  x="45" 
+                  y="78" 
                   textAnchor="middle" 
                   fill="#4ADE50" 
                   fontFamily="system-ui, -apple-system, sans-serif"
-                  fontSize="72"
+                  fontSize="85"
                   fontWeight="900"
                   fontStyle="italic"
                 >
                   R
                 </text>
                 <text 
-                  x="82" 
-                  y="28" 
+                  x="88" 
+                  y="25" 
                   fill="#4ADE50" 
                   fontFamily="system-ui, -apple-system, sans-serif"
-                  fontSize="16"
+                  fontSize="18"
                   fontWeight="700"
                 >
                   ®
