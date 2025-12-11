@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, Linkedin, Twitter, Youtube } from "lucide-react";
+import { Mail, Linkedin, Twitter, Music } from "lucide-react";
 
 export function Footer() {
   return (
@@ -38,13 +38,13 @@ export function Footer() {
                 <Twitter className="h-4 w-4 text-muted-foreground" />
               </Link>
               <Link
-                href="https://youtube.com/@devinreed"
+                href="https://open.spotify.com/show/5u2UnlSJjYE7YVQZpLCJza"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-muted rounded-full flex items-center justify-center hover:bg-[var(--reed-green)]/20 hover:scale-110 transition-all duration-300"
-                aria-label="YouTube"
+                aria-label="Spotify Podcast"
               >
-                <Youtube className="h-4 w-4 text-muted-foreground" />
+                <Music className="h-4 w-4 text-muted-foreground" />
               </Link>
               <Link
                 href="mailto:devin@thereeder.co"
@@ -109,12 +109,22 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://youtube.com/@devinreed"
+                  href="https://open.spotify.com/show/5u2UnlSJjYE7YVQZpLCJza"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-[var(--reed-green)] transition-colors duration-200"
                 >
-                  YouTube
+                  Podcast (Spotify)
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://podcasts.apple.com/us/podcast/reed-between-the-lines/id1736811325"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-[var(--reed-green)] transition-colors duration-200"
+                >
+                  Podcast (Apple)
                 </Link>
               </li>
               <li>

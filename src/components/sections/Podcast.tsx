@@ -2,42 +2,45 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { Play, Headphones } from "lucide-react";
+import { Play, Headphones, Music, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const platforms = [
   { 
     name: "Apple Podcasts", 
-    url: "https://podcasts.apple.com/us/podcast/reed-between-the-lines/id1740740-podcast", 
-    icon: "🎧" 
+    url: "https://podcasts.apple.com/us/podcast/reed-between-the-lines/id1736811325", 
+    Icon: Headphones,
   },
   { 
     name: "Spotify", 
-    url: "https://open.spotify.com/show/reed-between-the-lines", 
-    icon: "🎵" 
+    url: "https://open.spotify.com/show/5u2UnlSJjYE7YVQZpLCJza", 
+    Icon: Music,
   },
   { 
     name: "YouTube", 
-    url: "https://youtube.com/@devinreed", 
-    icon: "▶️" 
+    url: "https://www.youtube.com/results?search_query=reed+between+the+lines+devin+reed", 
+    Icon: Youtube,
   },
 ];
 
 const recentEpisodes = [
   {
     title: "How to Stand Out and Win Over Your Audience",
-    guest: "Jen Allen-Knuth",
-    duration: "58 min",
+    guest: "Heike Young",
+    duration: "54 min",
+    url: "https://open.spotify.com/show/5u2UnlSJjYE7YVQZpLCJza",
   },
   {
-    title: "The Content Playbook That Scaled Gong",
+    title: "The #1 Mistake Brands Make with B2B Content",
     guest: "Solo Episode",
-    duration: "42 min",
+    duration: "38 min",
+    url: "https://open.spotify.com/show/5u2UnlSJjYE7YVQZpLCJza",
   },
   {
-    title: "Building Thought Leadership That Actually Matters",
+    title: "Why Playing It Safe Kills Your Content",
     guest: "Kyle Lacy",
     duration: "51 min",
+    url: "https://open.spotify.com/show/5u2UnlSJjYE7YVQZpLCJza",
   },
 ];
 
@@ -83,19 +86,29 @@ export function Podcast() {
             <span className="text-sm font-bold text-[var(--reed-green)] uppercase tracking-widest">
               The Podcast
             </span>
-            {/* Podcast logo styled to match the actual branding */}
-            <div className="mt-4 mb-6">
-              <div className="flex items-baseline gap-2 flex-wrap">
-                <span className="text-5xl lg:text-6xl xl:text-7xl font-display text-[var(--reed-green)] drop-shadow-[0_0_30px_rgba(74,222,80,0.5)]">
+            
+            {/* Podcast Logo - Matching the exact brand style */}
+            <div className="mt-6 mb-8">
+              <div className="flex items-start gap-3">
+                {/* REED in bold green */}
+                <span className="text-6xl lg:text-7xl xl:text-8xl font-display text-[var(--reed-green)] leading-none drop-shadow-[0_0_30px_rgba(74,222,80,0.4)]">
                   REED
                 </span>
-                <div className="flex flex-col leading-none">
-                  <span className="text-2xl lg:text-3xl xl:text-4xl font-display text-white">BETWEEN</span>
-                  <span className="text-2xl lg:text-3xl xl:text-4xl font-display text-white border-2 border-[var(--reed-green)] px-2 inline-block">THE LINES</span>
-                  <span className="text-2xl lg:text-3xl xl:text-4xl font-display text-white">PODCAST</span>
+                {/* Right side stack */}
+                <div className="flex flex-col justify-center pt-1">
+                  <span className="text-xl lg:text-2xl xl:text-3xl font-display text-white leading-tight">
+                    BETWEEN
+                  </span>
+                  <span className="text-xl lg:text-2xl xl:text-3xl font-display text-white leading-tight border-2 border-[var(--reed-green)] px-2 py-0.5 inline-block my-1">
+                    THE LINES
+                  </span>
+                  <span className="text-xl lg:text-2xl xl:text-3xl font-display text-white leading-tight">
+                    PODCAST
+                  </span>
                 </div>
               </div>
             </div>
+
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               Raw conversations with the sharpest minds in B2B marketing.
               No fluff. No corporate speak. Just real talk about what actually works.
@@ -105,24 +118,24 @@ export function Podcast() {
               </span>
             </p>
 
-            {/* Listen Platforms */}
-            <div className="flex flex-wrap gap-4 mb-8">
+            {/* Listen Platforms - Using Lucide Icons */}
+            <div className="flex flex-wrap gap-3 mb-8">
               {platforms.map((platform, i) => (
                 <Link
                   key={i}
                   href={platform.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-card border border-border rounded-full hover:border-[var(--reed-green)] hover:bg-[var(--reed-green)]/10 transition-all duration-300"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 bg-card border border-border rounded-full hover:border-[var(--reed-green)] hover:bg-[var(--reed-green)]/10 transition-all duration-300 group"
                 >
-                  <span>{platform.icon}</span>
-                  <span className="text-sm font-semibold">{platform.name}</span>
+                  <platform.Icon className="h-4 w-4 text-muted-foreground group-hover:text-[var(--reed-green)] transition-colors" />
+                  <span className="text-sm font-semibold group-hover:text-[var(--reed-green)] transition-colors">{platform.name}</span>
                 </Link>
               ))}
             </div>
 
             <Button asChild size="lg">
-              <Link href="https://youtube.com/@devinreed" target="_blank" rel="noopener noreferrer">
+              <Link href="https://open.spotify.com/show/5u2UnlSJjYE7YVQZpLCJza" target="_blank" rel="noopener noreferrer">
                 <Headphones className="mr-2 h-5 w-5" />
                 Listen Now
               </Link>
@@ -141,9 +154,12 @@ export function Podcast() {
                 Recent Episodes
               </p>
               {recentEpisodes.map((episode, i) => (
-                <div
+                <Link
                   key={i}
-                  className={`group bg-card border border-border rounded-2xl p-6 hover:border-[var(--reed-green)]/50 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] cursor-pointer card-hover ${
+                  href={episode.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`group block bg-card border border-border rounded-2xl p-6 hover:border-[var(--reed-green)]/50 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] card-hover ${
                     isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                   }`}
                   style={{ transitionDelay: `${(i + 2) * 100}ms` }}
@@ -163,7 +179,7 @@ export function Podcast() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
@@ -172,4 +188,3 @@ export function Podcast() {
     </section>
   );
 }
-

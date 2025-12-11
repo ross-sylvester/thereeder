@@ -6,13 +6,15 @@ B2B Content Strategy website for Devin Reed - Founder & CEO of The Reeder.
 
 This is the official website for The Reeder, a content strategy firm helping B2B companies grow their audience, brand, and pipeline through strategic content.
 
+Devin Reed is a recognized B2B content strategist who scaled Gong's brand from $20M to $200M ARR as Head of Content. He now runs The Reeder, advising SaaS companies on content strategy and hosting the "Reed Between the Lines" podcast.
+
 ### Features
 
-- ⚡ **Fast** - Built with Next.js 16 and optimized for performance
-- 🎨 **On-Brand** - Matches Devin's signature neon green aesthetic
-- ♿ **Accessible** - WCAG compliant with skip links and semantic HTML
-- 📱 **Responsive** - Looks great on all devices
-- 🔍 **SEO Optimized** - Full meta tags and structured data
+- **Fast** - Built with Next.js 16 and optimized for performance
+- **On-Brand** - Matches Devin's signature neon green aesthetic
+- **Accessible** - WCAG compliant with skip links and semantic HTML
+- **Responsive** - Looks great on all devices
+- **SEO Optimized** - Full meta tags and structured data
 
 ## Tech Stack
 
@@ -43,6 +45,13 @@ npm start
 - **Primary Green**: `#4ADE50`
 - **Background**: `#0a0a0a`
 - **Foreground**: `#ffffff`
+
+## Links
+
+- Website: [thereeder.co](https://thereeder.co)
+- LinkedIn: [linkedin.com/in/devinreed](https://linkedin.com/in/devinreed)
+- Podcast (Spotify): [Reed Between the Lines](https://open.spotify.com/show/5u2UnlSJjYE7YVQZpLCJza)
+- Podcast (Apple): [Reed Between the Lines](https://podcasts.apple.com/us/podcast/reed-between-the-lines/id1736811325)
 
 ## License
 
