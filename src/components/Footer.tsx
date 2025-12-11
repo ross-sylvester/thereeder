@@ -8,8 +8,15 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="md:col-span-2">
-            <Link href="/" className="inline-block">
-              <span className="text-3xl font-display text-foreground hover:text-[var(--reed-green)] transition-colors">
+            <Link href="/" className="inline-flex items-center gap-3 group">
+              {/* R Logo */}
+              <div className="relative w-10 h-10 flex items-center justify-center">
+                <span className="text-4xl font-display text-[var(--reed-green)] font-bold leading-none group-hover:drop-shadow-[0_0_10px_rgba(74,222,80,0.5)] transition-all duration-300" style={{ fontWeight: 900 }}>
+                  R
+                </span>
+                <span className="absolute -top-0.5 -right-1 text-[9px] text-[var(--reed-green)]">®</span>
+              </div>
+              <span className="text-2xl font-display text-foreground group-hover:text-[var(--reed-green)] transition-colors" style={{ fontWeight: 900 }}>
                 THE REEDER
               </span>
             </Link>

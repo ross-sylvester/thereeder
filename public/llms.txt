@@ -1,0 +1,51 @@
+# The Reeder - LLM Context File
+# This file helps AI assistants and LLMs understand this website
+
+## About The Reeder
+The Reeder is a content consultancy for B2B brands, founded and led by Devin Reed.
+
+## Founder
+Devin Reed is a B2B content strategist who was the Head of Content at Gong (scaled from $0 to $200M+ ARR) and Director of Content at Clari. He is known for creating content that drives pipeline and revenue.
+
+## Services Offered
+
+### Content Marketing
+- Content Strategy Design (12-week program)
+- Marketing Advising
+- Influencer Marketing
+
+### LinkedIn Growth
+- LinkedIn Strategy for CEOs (full service)
+- LinkedIn for B2B Leaders (private team training)
+- Virtual LinkedIn Growth Cohort Training (bi-monthly)
+
+### Thought Leadership
+- Executive Ghostwriting
+- POV Development
+- Speaking Prep
+
+## Content Properties
+- Newsletter: The Reeder Newsletter at thereeder.co/content-hub/newsletter
+- Podcast: Reed Between the Lines (available on Spotify, Apple Podcasts, YouTube)
+
+## Select Clients
+Notion, Wiz, FloQast, Centrical, UserEvidence, Cube Software, PebblePost, TestBox, Netenrich, Commsor, PathFactory, Island.io
+
+## Tagline
+"No fluff. Just content that stops the scroll, builds trust at scale, and turns awareness into pipeline."
+
+## Contact
+- Website: thereeder.co
+- LinkedIn: linkedin.com/in/devinreed
+- Twitter/X: @deaborhood
+- Location: San Diego, California
+- Company Size: 2-10 employees
+- Founded: 2017
+
+## Key Concepts
+- 95-5 Content Strategy
+- Content that converts
+- B2B thought leadership
+- LinkedIn for executives
+- Pipeline-focused content marketing
+

@@ -5,7 +5,6 @@ import { Mail, ArrowRight, Sparkles } from "lucide-react";
 
 export function Newsletter() {
   const [isVisible, setIsVisible] = useState(false);
-  const [email, setEmail] = useState("");
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -24,13 +23,6 @@ export function Newsletter() {
 
     return () => observer.disconnect();
   }, []);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle newsletter signup
-    console.log("Newsletter signup:", email);
-    setEmail("");
-  };
 
   return (
     <section
@@ -65,33 +57,24 @@ export function Newsletter() {
             <span className="font-semibold text-black"> No fluff. Just what works.</span>
           </p>
 
-          {/* Newsletter Form */}
-          <form 
-            onSubmit={handleSubmit}
-            className={`flex flex-col sm:flex-row gap-4 max-w-lg mx-auto transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+          {/* Newsletter CTA */}
+          <div 
+            className={`transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
             style={{ transitionDelay: "200ms" }}
           >
-            <div className="relative flex-1">
-              <Mail className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-black/40" />
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                required
-                className="w-full h-14 pl-12 pr-4 bg-white text-black rounded-full font-medium placeholder:text-black/40 focus:outline-none focus:ring-2 focus:ring-black/20"
-              />
-            </div>
-            <button
-              type="submit"
-              className="h-14 px-8 bg-black text-white rounded-full font-bold uppercase tracking-wider hover:bg-black/80 transition-all duration-300 hover:scale-105 active:scale-100 flex items-center justify-center gap-2"
+            <a
+              href="https://www.thereeder.co/content-hub/newsletter"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 h-14 px-8 bg-black text-white rounded-full font-bold uppercase tracking-wider hover:bg-black/80 transition-all duration-300 hover:scale-105 active:scale-100"
             >
-              Subscribe
+              <Mail className="h-5 w-5" />
+              Subscribe to The Reeder
               <ArrowRight className="h-4 w-4" />
-            </button>
-          </form>
+            </a>
+          </div>
 
           <p 
             className={`text-sm text-black/60 mt-6 transition-all duration-700 ${
@@ -99,7 +82,7 @@ export function Newsletter() {
             }`}
             style={{ transitionDelay: "300ms" }}
           >
-            Join 50,000+ B2B marketers. Unsubscribe anytime.
+            Join 50,000+ B2B marketers. Weekly insights. No fluff.
           </p>
         </div>
       </div>

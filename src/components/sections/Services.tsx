@@ -1,32 +1,32 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Megaphone, PenTool, Users, Lightbulb } from "lucide-react";
+import { Megaphone, Users, PenTool, Linkedin } from "lucide-react";
 
 const services = [
   {
     icon: Megaphone,
-    title: "Content Strategy",
-    description: "Stop creating content for content's sake. Get a strategy that actually drives pipeline and revenue.",
-    highlights: ["Content audits", "Editorial calendars", "Distribution playbooks"],
+    title: "Content Marketing",
+    description: "Strategic content that stops the scroll, builds trust at scale, and turns awareness into pipeline.",
+    highlights: ["Content Strategy Design (12-week)", "Marketing Advising", "Influencer Marketing"],
+  },
+  {
+    icon: Linkedin,
+    title: "LinkedIn Growth",
+    description: "Transform executives into thought leaders. Build audiences that convert into pipeline.",
+    highlights: ["LinkedIn Strategy for CEOs", "B2B Leaders Training", "Virtual Cohort Training"],
   },
   {
     icon: PenTool,
     title: "Thought Leadership",
-    description: "Position your executives as the go-to voices in your space. The kind of content that gets shared in Slack.",
-    highlights: ["Executive ghostwriting", "LinkedIn strategy", "Speaking prep"],
+    description: "Position your brand as the go-to voice in your space. The kind of content that gets shared in Slack.",
+    highlights: ["Executive Ghostwriting", "POV Development", "Speaking Prep"],
   },
   {
     icon: Users,
-    title: "Content Team Building",
-    description: "Build and scale a content team that punches above its weight. I've done it twice. Let me help you do it once.",
-    highlights: ["Hiring frameworks", "Team structure", "Process design"],
-  },
-  {
-    icon: Lightbulb,
     title: "Advisory & Coaching",
-    description: "Not ready for a full engagement? Get strategic guidance when you need it. Think of me as your content co-pilot.",
-    highlights: ["1:1 coaching", "Strategy reviews", "Quarterly planning"],
+    description: "Strategic guidance for content leaders. Think of me as your content co-pilot.",
+    highlights: ["1:1 Coaching", "Strategy Reviews", "Team Workshops"],
   },
 ];
 
@@ -68,16 +68,16 @@ export function Services() {
           }`}
         >
           <span className="text-sm font-bold text-[var(--reed-green)] uppercase tracking-widest">
-            How We Work Together
+            What We Offer
           </span>
           <h2 className="text-4xl lg:text-5xl xl:text-6xl font-display text-foreground mt-4">
-            SERVICES THAT MOVE
+            CONTENT THAT
             <br />
-            <span className="text-[var(--reed-green)]">THE NEEDLE</span>
+            <span className="text-[var(--reed-green)]">CONVERTS</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-6">
-            No generic playbooks. No cookie-cutter strategies. 
-            Just what works for <span className="text-foreground">your</span> business.
+            No fluff. Just content that stops the scroll, builds trust at scale, 
+            and turns awareness into pipeline.
           </p>
         </div>
 
@@ -122,4 +122,3 @@ export function Services() {
     </section>
   );
 }
-

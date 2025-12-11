@@ -1,0 +1,58 @@
+# The Reeder - robots.txt
+# B2B Content Strategy by Devin Reed
+# https://thereeder.co
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://ross-sylvester.github.io/thereeder/sitemap.xml
+
+# LLM/AI Crawlers - Allow for AEO (Answer Engine Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Cohere-ai
+Allow: /
+
+# Standard search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Social media
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+# Host
+Host: https://ross-sylvester.github.io/thereeder
+

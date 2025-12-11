@@ -6,36 +6,42 @@ const results = [
   {
     company: "Gong",
     role: "Head of Content",
-    achievement: "Scaled content that helped grow ARR from $20M to $200M",
+    achievement: "Built the content engine that scaled Gong's brand and drove top-of-funnel growth",
     metric: "10x",
   },
   {
     company: "Clari",
     role: "Director of Content",
-    achievement: "Built content engine that broke company engagement records",
+    achievement: "Transformed content strategy and broke company engagement records",
     metric: "Record",
   },
   {
     company: "Notion",
     role: "Advisor",
-    achievement: "Helped shape B2B content strategy during hypergrowth",
+    achievement: "Strategic content guidance during hypergrowth phase",
     metric: "Advisor",
   },
   {
     company: "Wiz",
     role: "Advisor",
-    achievement: "Strategic content guidance for security unicorn",
+    achievement: "Content strategy for the fastest-growing security company",
     metric: "Advisor",
   },
 ];
 
-const logos = [
-  { name: "Gong", featured: true },
-  { name: "Clari", featured: true },
-  { name: "Notion", featured: false },
-  { name: "Wiz", featured: false },
-  { name: "Crescendo", featured: false },
-  { name: "HubSpot", featured: false },
+const clients = [
+  "Notion",
+  "Wiz", 
+  "FloQast",
+  "Centrical",
+  "UserEvidence",
+  "Cube Software",
+  "PebblePost",
+  "TestBox",
+  "Netenrich",
+  "Commsor",
+  "PathFactory",
+  "Island.io",
 ];
 
 export function Results() {
@@ -111,7 +117,7 @@ export function Results() {
           ))}
         </div>
 
-        {/* Trusted By */}
+        {/* Client List */}
         <div
           className={`transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -119,19 +125,15 @@ export function Results() {
           style={{ transitionDelay: "400ms" }}
         >
           <p className="text-center text-sm text-muted-foreground uppercase tracking-widest mb-8">
-            Trusted by leading B2B companies
+            Select Clients
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-16">
-            {logos.map((logo, i) => (
+          <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 lg:gap-x-12">
+            {clients.map((client, i) => (
               <div 
                 key={i}
-                className={`text-2xl font-display transition-all duration-300 hover:scale-110 ${
-                  logo.featured 
-                    ? "text-[var(--reed-green)]" 
-                    : "text-muted-foreground/50 hover:text-muted-foreground"
-                }`}
+                className="text-lg lg:text-xl font-display text-muted-foreground/60 hover:text-[var(--reed-green)] transition-all duration-300 hover:scale-110 cursor-default"
               >
-                {logo.name}
+                {client}
               </div>
             ))}
           </div>
@@ -140,4 +142,3 @@ export function Results() {
     </section>
   );
 }
-
