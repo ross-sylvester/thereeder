@@ -35,22 +35,31 @@ export function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <nav className="flex items-center justify-between h-20" aria-label="Main navigation">
-          {/* Logo - R icon + THE REEDER text */}
+          {/* Logo - R icon only (matching Devin's exact brand) */}
           <Link 
             href="/" 
-            className="flex items-center gap-3 group"
+            className="group"
             aria-label="The Reeder - Home"
           >
-            {/* R Logo Icon */}
-            <div className="relative w-9 h-9 flex items-center justify-center">
-              <span className="text-3xl font-display text-[var(--reed-green)] font-bold leading-none group-hover:drop-shadow-[0_0_10px_rgba(74,222,80,0.5)] transition-all duration-300" style={{ fontWeight: 900 }}>
+            {/* R Logo - Exact match to Devin's brand icon */}
+            <div className="relative w-12 h-12 sm:w-14 sm:h-14 bg-[#3a3a3a] rounded-lg flex items-center justify-center group-hover:bg-[#454545] transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(74,222,80,0.3)]">
+              <span 
+                className="text-[32px] sm:text-[38px] font-display text-[var(--reed-green)] leading-none select-none"
+                style={{ 
+                  fontWeight: 900,
+                  fontStyle: 'italic',
+                  transform: 'skewX(-5deg)',
+                  textShadow: '2px 2px 0 rgba(0,0,0,0.3)'
+                }}
+              >
                 R
               </span>
-              <span className="absolute -top-0.5 -right-1 text-[8px] text-[var(--reed-green)]">®</span>
+              <span 
+                className="absolute top-1 right-1 sm:top-1.5 sm:right-1.5 text-[8px] sm:text-[10px] text-[var(--reed-green)] font-bold"
+              >
+                ®
+              </span>
             </div>
-            <span className="text-xl font-display tracking-[0.12em] text-foreground group-hover:text-[var(--reed-green)] transition-colors duration-300 hidden sm:inline" style={{ fontWeight: 900 }}>
-              THE REEDER
-            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -69,7 +78,7 @@ export function Navigation() {
           {/* CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <Button asChild size="sm">
-              <Link href="#contact">Work With Me</Link>
+              <Link href="#contact">Get Started</Link>
             </Button>
           </div>
 
@@ -105,7 +114,7 @@ export function Navigation() {
             <div className="pt-4">
               <Button asChild className="w-full">
                 <Link href="#contact" onClick={() => setIsOpen(false)}>
-                  Work With Me
+                  Get Started
                 </Link>
               </Button>
             </div>

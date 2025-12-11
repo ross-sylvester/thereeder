@@ -99,7 +99,7 @@ export function Hero() {
           >
             <span className="w-2 h-2 bg-[var(--reed-green)] rounded-full animate-pulse" />
             <span className="text-sm font-semibold text-[var(--reed-green)] uppercase tracking-wider">
-              Content Strategy for B2B Marketing Leaders
+              Strategy for B2B Marketers
             </span>
           </div>
 
